@@ -1,4 +1,4 @@
-package ir.cinema;
+package Entity;
 
 public class AdminRegister {
     private String firstName;

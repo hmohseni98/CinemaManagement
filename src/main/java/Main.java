@@ -1,5 +1,12 @@
-package ir.cinema;
-
+import Database.FillDataBase;
+import Entity.AdminRegister;
+import Entity.CinemaRegister;
+import Entity.CustomerRegister;
+import Entity.Ticket;
+import Repository.AdminRepository;
+import Repository.CinemaRepository;
+import Repository.CustomerRepository;
+import Repository.TicketRepository;
 
 import java.sql.SQLException;
 import java.time.LocalDate;
@@ -9,7 +16,6 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) throws SQLException {
         FillDataBase fillDataBase = new FillDataBase();
-        //fillDataBase.createAllTables(); //faghat bar aval ejra shavad baad comment shavad chon data tekrar mishavad va error primary key midahad.
         //fillDataBase.insertData(); //faghat bar aval ejra shavad baad comment shavad chon data tekrar mishavad va error primary key midahad.
         boolean isContinue = true;
         while (isContinue) {

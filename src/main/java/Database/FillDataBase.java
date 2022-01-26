@@ -1,4 +1,10 @@
-package ir.cinema;
+package Database;
+
+import Entity.AdminRegister;
+import Entity.CinemaRegister;
+import Entity.CustomerRegister;
+import Entity.Ticket;
+import Repository.*;
 
 import java.sql.SQLException;
 
@@ -9,14 +15,6 @@ public class FillDataBase {
     private final CustomerRepository customerRepository = new CustomerRepository();
     private final ReserveRepository reserveRepository = new ReserveRepository();
 
-    public void createAllTables() throws SQLException {
-        adminRepository.createTableAdmin();
-        cinemaRepository.CreateTableCinema();
-        ticketRepository.CreateTableTicket();
-        customerRepository.CreateTableCustomer();
-        reserveRepository.CreateReserveTable();
-        System.out.println("tables created success!!");
-    }
     public void insertData() throws SQLException{
         AdminRegister admin1 = new AdminRegister("hassan", "mohseni", "admin", "admin");
         adminRepository.saveAdmin(admin1);

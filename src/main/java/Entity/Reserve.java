@@ -1,4 +1,4 @@
-package ir.cinema;
+package Entity;
 
 public class Reserve {
     private int ticket_id;
