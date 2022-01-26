@@ -32,7 +32,8 @@ public class CustomerRepository {
         preparedStatement.setString(2,password);
         ResultSet result = preparedStatement.executeQuery();
         result.next();
+        int res = result.getInt("count");
         preparedStatement.close();
-        return result.getInt("count");
+        return res;
     }
 }
